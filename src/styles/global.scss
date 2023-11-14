@@ -1,0 +1,26 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #e5e5e5;
+  --color-primary: #212121;
+  --color-secondary: #637093;
+  --color-blue: #255ced;
+  --color-lightBlue: #5685ff;
+  --color-accent: #fd6230;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

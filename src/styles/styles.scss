@@ -1,0 +1,7 @@
+// @import "~normalise.css";
+@import "./generalStyles.scss";
+
+.card {
+  @include widthHeight(336px, 266px);
+  border: 1px solid red;
+}
