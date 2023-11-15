@@ -1,7 +1,215 @@
-// @import "~normalise.css";
+@import "~normalize.css";
 @import "./generalStyles.scss";
+@import "./fonts.scss";
 
-.card {
-  @include widthHeight(336px, 266px);
-  border: 1px solid red;
+body {
+  background-color: var(--bg-secondary);
+}
+
+// -----Shared styles
+.title-font {
+  font: var(--font-xl-w900);
+  text-align: center;
+}
+.navigation__link_blue {
+  color: var(--color-blue);
+}
+.container {
+  padding: 0px 12px;
+}
+
+.navigation {
+  @include flex(start);
+  gap: 20px;
+}
+
+// ----------Header
+.header_white {
+  background-color: var(--bg-primary);
+}
+.header {
+  @include flex(space-between);
+}
+
+// ----------Forecasts section
+.navigation__link {
+  font: var(--font-m-w900);
+}
+
+// List-card
+.body_rounded_white {
+  border-radius: 12px;
+  background-color: var(--bg-primary);
+}
+
+.card__banner {
+  @include flex(space-evenly);
+
+  background-image: url("../images/cardbBanner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  img {
+    display: block;
+    width: 67px;
+    height: auto;
+  }
+}
+
+.card__info_inner {
+  padding: 16px 20px 20px 20px;
+}
+
+.card__info-row {
+  @include flex(start);
+}
+
+.card__info-item:first-child {
+  font: var(--font-s-w900);
+}
+.card__info-item:nth-child(2) {
+  font: var(--font-s-w400);
+}
+
+.card__info-item_blue {
+  color: var(--color-blue);
+}
+
+.card__info-item_grey {
+  color: var(--color-secondary);
+}
+
+.card__info-title {
+  font: var(--font-l-w700);
+  margin-top: 4px;
+}
+
+.button {
+  font: var(--font-m-w900);
+  border-radius: 20px;
+}
+
+.button_outline {
+  border: 3px solid var(--color-lightBlue);
+  box-sizing: border-box;
+  padding: 10px 12px 10px 20px;
+  margin: 0 auto;
+
+  @include flex(space-between);
+}
+
+.button__arrow {
+  margin-left: 12px;
+  display: block;
+}
+
+// ---------Top Leagues
+.leagues__list {
+  padding: 16px;
+}
+.leagues__list-item {
+  @include flex(start);
+  gap: 8px;
+  margin-bottom: 20px;
+  font: var(--font-m-w600);
+}
+.leagues__image {
+  width: 20px;
+  height: 20px;
+}
+
+// MEDIA SCREEN Mobile from 320px to 1023px
+@media screen and (max-width: 1023px) {
+  // ----------Header
+  .header,
+  .forecasts-header__title {
+    margin-bottom: 16px;
+  }
+
+  .title-font {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // ----------Forecasts section
+  .forecasts {
+    margin-bottom: 70px;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
+  .match__navigation {
+    justify-content: start;
+  }
+
+  // List-card
+  .forecasts__cards {
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    @include widthHeight(336px, 266px);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .card__banner {
+    @include widthHeight(100%, 130px);
+  }
+
+  // ------Match section
+  .match-header__title {
+    margin-bottom: 24px;
+  }
+  .match__list-item {
+  }
+}
+
+// MEDIA SCREEN Desktop from 1024px to max
+@media screen and (min-width: 1023px) {
+  .header-row {
+    @include flex(start);
+  }
+
+  // ----------Header
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .container {
+    max-width: 1128px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // ----------Forecasts section
+  .forecasts {
+    margin-bottom: 55px;
+  }
+
+  // List-card
+  .forecasts__cards {
+    margin-top: 16px;
+    margin-bottom: 33px;
+
+    @include flex(space-between);
+  }
+
+  .card {
+    @include widthHeight(360px, 276px);
+  }
+
+  .card__banner {
+    @include widthHeight(100%, 140px);
+  }
+
+  .leagues__list {
+    width: 264px;
+    height: 595px;
+  }
 }
