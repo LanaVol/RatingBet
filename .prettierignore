@@ -1,0 +1,6 @@
+# By default prettier ignores files (".git", ".svn" and ".hg") and node_modules
+
+# Ignore specific files or directories
+dist
+
+
