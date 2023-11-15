@@ -6,21 +6,43 @@
   --color-blue: #255ced;
   --color-lightBlue: #5685ff;
   --color-accent: #fd6230;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  --font-family-main: "Inter", sans-serif;
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  // Font-weigth
+  --w400: 400; //regular
+  --w600: 600; //semibold
+  --w700: 700; //bold
+  --w900: 900; //black
 
-a {
-  text-decoration: none;
+  // Font-size
+  --size-s: 12px;
+  --size-m: 14px;
+  --size-l: 18px;
+  --size-xl: 20px;
+
+  // line-heigth
+  --line13: 1.3;
+  --line14: 1.4;
+  --line17: 1.7;
+  --line12: 1.2;
+
+  // Fonts - S
+  --font-s-w700: var(--w700) var(--size-s) / var(--line17) var(--font-family-main);
+  --font-s-w400: var(--w400) var(--size-s) / var(--line13) var(--font-family-main);
+  --font-s-w900: var(--w900) var(--size-s) / var(--line13) var(--font-family-main);
+
+  // Fonts - M
+  --font-m-w900: var(--w900) var(--size-m) / var(--line13) var(--font-family-main);
+  --font-m-w700: var(--w700) var(--size-m) / var(--line14) var(--font-family-main);
+  --font-m-w600: var(--w600) var(--size-m) / var(--line14) var(--font-family-main);
+  --font-m-w400: var(--w400) var(--size-m) / var(--line17) var(--font-family-main);
+
+  // Fonts - L
+  --font-l-w900: var(--w900) var(--size-l) / var(--line13) var(--font-family-main);
+  --font-l-w700: var(--w700) var(--size-l) / var(--line13) var(--font-family-main);
+  --font-l-w400: var(--w400) var(--size-l) / var(--line13) var(--font-family-main);
+
+  // Fonts - XL
+  --font-xl-w900: var(--w900) var(--size-xl) / var(--line12) var(--font-family-main);
 }
