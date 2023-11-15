@@ -7,7 +7,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header class="header_white">
       <div class="header container">
         <div class="header__logo">
           <figure>
@@ -35,30 +35,34 @@
         </div>
 
         <!-- <div class="header__burger">
-            <figure>
-              <img src="./images/icons/navburger.svg" alt="Menu icon" />
-            </figure>
-          </div> -->
+          <figure>
+            <img src="./images/icons/navburger.svg" alt="Menu icon" />
+          </figure>
+        </div> -->
       </div>
     </header>
 
     <!-- Main -->
     <main>
-      <section id="forecasts" class="container">
-        <div class="forecasts">
-          <h2 class="forecasts__title">Прогнозы на спорт</h2>
+      <section id="forecasts" class="forecasts container">
+        <div class="header-row">
+          <h2 class="forecasts-header__title title-font">
+            <span><img src="./images/icons/titleElement.svg" /></span>
+            Прогнозы на спорт
+            <span><img src="./images/icons/titleElement.svg" /></span>
+          </h2>
 
-          <nav class="forecasts__menu">
-            <ul>
-              <li class="forecasts__menu-item">Все</li>
-              <li class="forecasts__menu-item">Сегодня</li>
-              <li class="forecasts__menu-item">Завтра</li>
+          <nav>
+            <ul class="navigation">
+              <li class="navigation__link navigation__link_blue">Все</li>
+              <li class="navigation__link navigation__link_blue">Сегодня</li>
+              <li class="navigation__link navigation__link_blue">Завтра</li>
             </ul>
           </nav>
         </div>
 
-        <div class="forecasts__cards">
-          <div class="card">
+        <ul class="forecasts__cards">
+          <li class="card body_rounded_white">
             <div class="card__banner">
               <figure>
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" />
@@ -67,24 +71,118 @@
                 <img src="./images/teamLogos/vs.png" alt="VS" />
               </figure>
               <figure>
-                <img
-                  src="./images/teamLogos/manchester-city.png"
-                  alt="Team logo"
-                />
+                <img src="./images/teamLogos/manchester-city.png" alt="Team logo" />
               </figure>
             </div>
 
-            <div class="card__info">
-              <ul>
-                <li class="card__info-item">Футбол</li>
-                <li class="card__info-item">Завтра в 09:20</li>
+            <div class="card__info card__info_inner">
+              <ul class="card__info-row">
+                <li class="card__info-item card__info-item_blue">Футбол</li>
+                <li class="card__info-item card__info-item_grey">Завтра в 09:20</li>
               </ul>
-              <h3 class="card__info-title">
-                Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022
-              </h3>
+              <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
             </div>
-          </div>
+          </li>
+
+          <li class="card body_rounded_white">
+            <div class="card__banner">
+              <figure>
+                <img src="./images/teamLogos/munchen.png" alt="Team logo" />
+              </figure>
+              <figure>
+                <img src="./images/teamLogos/vs.png" alt="VS" />
+              </figure>
+              <figure>
+                <img src="./images/teamLogos/ffc.png" alt="Team logo" />
+              </figure>
+            </div>
+
+            <div class="card__info card__info_inner">
+              <ul class="card__info-row">
+                <li class="card__info-item card__info-item_blue">Футбол</li>
+                <li class="card__info-item card__info-item_grey">Завтра в 09:20</li>
+              </ul>
+              <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
+            </div>
+          </li>
+
+          <li class="card body_rounded_white">
+            <div class="card__banner">
+              <figure>
+                <img src="./images/teamLogos/kuzbass.png" alt="Team logo" />
+              </figure>
+              <figure>
+                <img src="./images/teamLogos/vs.png" alt="VS" />
+              </figure>
+              <figure>
+                <img src="./images/teamLogos/fcsm.png" alt="Team logo" />
+              </figure>
+            </div>
+
+            <div class="card__info card__info_inner">
+              <ul class="card__info-row">
+                <li class="card__info-item card__info-item_blue">Футбол</li>
+                <li class="card__info-item card__info-item_grey">Завтра в 09:20</li>
+              </ul>
+              <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
+            </div>
+          </li>
+        </ul>
+
+        <button class="button button_outline">
+          Больше прогнозов <span class="button__arrow"><img src="./images/icons/arrowButton.svg" alt="Arrow" /></span>
+        </button>
+      </section>
+
+      <section class="match container">
+        <div class="header-row">
+          <h2 class="match-header__title title-font">
+            <span><img src="./images/icons/titleElement.svg" /></span>
+            Матч-центр
+            <span><img src="./images/icons/titleElement.svg" /></span>
+          </h2>
+
+          <nav>
+            <ul class="navigation match__navigation">
+              <li class="navigation__link navigation__link_blue">Live</li>
+              <li class="navigation__link navigation__link_blue">05.06</li>
+              <li class="navigation__link navigation__link_blue">Вчера</li>
+              <li class="navigation__link navigation__link_blue">Сегодня</li>
+              <li class="navigation__link navigation__link_blue">Завтра</li>
+              <li class="navigation__link navigation__link_blue">09.06</li>
+              <li class="navigation__link navigation__link_blue">Календарь</li>
+            </ul>
+          </nav>
         </div>
+
+        <ul class="match__list">
+          <li class="match__list-item body_rounded_white"></li>
+        </ul>
+      </section>
+
+      <!-- Top leagues-->
+      <section class="leagues container">
+        <h2 class="leagues-header__title title-font">
+          <span><img src="./images/icons/titleElement.svg" /></span>
+          Топ лиги
+          <span><img src="./images/icons/titleElement.svg" /></span>
+        </h2>
+
+        <ul class="leagues__list body_rounded_white">
+          <li class="leagues__list-item">
+            <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__image" />
+            <a>Лига чемпионов</a>
+          </li>
+
+          <li class="leagues__list-item">
+            <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__image" />
+            <a>Лига Европы</a>
+          </li>
+          <li class="leagues__list-item">
+            <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__image" />
+            <a>Суперкубок УЕФА</a>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
