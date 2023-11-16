@@ -10,9 +10,27 @@ body {
 .title-font {
   font: var(--font-xl-w900);
   text-align: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 7px;
+    height: 16px;
+    border-radius: 1px;
+    background-color: var(--color-accent);
+    display: inline-block;
+    transform: skew(-25deg);
+    margin: 0 8px;
+  }
 }
-.navigation__link_blue {
+
+.navigation__link_default {
   color: var(--color-blue);
+
+  &:hover {
+    color: var(--color-primary);
+  }
 }
 .container {
   padding: 0px 12px;
@@ -23,12 +41,27 @@ body {
   gap: 20px;
 }
 
+.block_center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // ----------Header
 .header_white {
   background-color: var(--bg-primary);
 }
+
 .header {
   @include flex(space-between);
+}
+
+.header__menu_default {
+  font: var(--font-m-w900);
+  color: var(--color-primary);
+}
+
+.menu__item:hover {
+  color: var(--color-lightBlue);
 }
 
 // ----------Forecasts section
@@ -60,19 +93,13 @@ body {
   padding: 16px 20px 20px 20px;
 }
 
-.card__info-row {
-  @include flex(start);
-}
-
-.card__info-item:first-child {
-  font: var(--font-s-w900);
-}
-.card__info-item:nth-child(2) {
+.card__info-item {
   font: var(--font-s-w400);
 }
 
-.card__info-item_blue {
+.card__info-item_bold_blue {
   color: var(--color-blue);
+  font-weight: var(--w900);
 }
 
 .card__info-item_grey {
@@ -85,35 +112,120 @@ body {
 }
 
 .button {
+  display: block;
   font: var(--font-m-w900);
   border-radius: 20px;
+  outline: none;
+  border-style: none;
+}
+
+.button_text {
+  padding: 1px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--color-lightBlue10);
+  }
+}
+
+.button__arrow {
+  margin-left: 10px;
+  display: block;
+
+  &:hover {
+    color: var(--bg-primary);
+  }
 }
 
 .button_outline {
   border: 3px solid var(--color-lightBlue);
+  color: var(--color-primary);
   box-sizing: border-box;
   padding: 10px 12px 10px 20px;
-  margin: 0 auto;
 
-  @include flex(space-between);
+  &:hover {
+    background-color: var(--color-lightBlue);
+    color: var(--bg-primary);
+  }
 }
 
-.button__arrow {
-  margin-left: 12px;
-  display: block;
+.button_contained {
+  background-color: var(--color-lightBlue);
+  color: var(--bg-primary);
+  padding: 10px 44px;
+}
+
+.cursor_pointer {
+  cursor: url("../images/icons/cursor.png"), pointer;
+}
+
+// ------------Match
+.match__item {
+  display: grid;
+  align-items: center;
+}
+
+.match__item_inner {
+  padding: 8px 16px 16px 16px;
+}
+
+.match__item-el {
+  font: var(--font-m-w400);
+}
+
+.match__item-el_grey {
+  color: var(--color-secondary);
+}
+
+.match__item-el_black,
+.match__item-points {
+  color: var(--color-primary);
+}
+
+.match__item-el_end {
+  margin-left: auto;
+}
+
+.match__icon {
+  @include widthHeight(24px, 24px);
+}
+
+.match__item-number-reverse,
+.match__item-number,
+.match__item-points {
+  font: var(--font-l-w900);
 }
 
 // ---------Top Leagues
+.leagues-header__title {
+  margin-bottom: 16px;
+}
+
 .leagues__list {
   padding: 16px;
+  height: 595px;
 }
-.leagues__list-item {
+
+.block_row {
   @include flex(start);
+}
+
+.leagues__list-item {
   gap: 8px;
   margin-bottom: 20px;
   font: var(--font-m-w600);
+  cursor: pointer;
 }
-.leagues__image {
+
+.leagues__list-item_default {
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.leagues__icon {
   width: 20px;
   height: 20px;
 }
@@ -121,14 +233,25 @@ body {
 // MEDIA SCREEN Mobile from 320px to 1023px
 @media screen and (max-width: 1023px) {
   // ----------Header
+  .header {
+    height: 56px;
+    position: relative;
+  }
+
+  .header__menu_mobile {
+    width: 296px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+  }
+
   .header,
   .forecasts-header__title {
     margin-bottom: 16px;
-  }
-
-  .title-font {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   // ----------Forecasts section
@@ -162,16 +285,68 @@ body {
     @include widthHeight(100%, 130px);
   }
 
-  // ------Match section
+  // ------------------------------Match section
+  .match__list {
+    max-width: 336px;
+  }
+
+  .match__item {
+    height: 121px;
+    grid-template-columns: 1.3fr 1fr;
+    margin-bottom: 12px;
+  }
+
+  .match__item-el:first-child {
+    @include gridRC(1, 1, 1);
+  }
+
+  .match__item-el:nth-child(2) {
+    @include gridRC(2, 1, -1);
+  }
+  .match__item-el:nth-child(4) {
+    @include gridRC(3, 1, -1);
+  }
+  .match__item-el:nth-child(5) {
+    @include gridRC(1, 2, 2);
+  }
+
+  .match__item-el_grey {
+    position: relative;
+
+    &::after {
+      content: "";
+      border: 0.5px solid var(--bg-secondary);
+      position: absolute;
+      bottom: 0;
+      left: -16px;
+      width: 336px;
+    }
+  }
+
+  .match__item-el_hide {
+    display: none;
+  }
+
+  .match__item-el_s {
+    @include flex(space-between);
+  }
+
   .match-header__title {
     margin-bottom: 24px;
   }
-  .match__list-item {
+
+  // ---------------- Top leagues
+  .leagues__list {
+    width: 336px;
   }
 }
 
 // MEDIA SCREEN Desktop from 1024px to max
 @media screen and (min-width: 1023px) {
+  .block_hide {
+    display: none;
+  }
+
   .header-row {
     @include flex(start);
   }
@@ -179,16 +354,30 @@ body {
   // ----------Header
   .header {
     margin-bottom: 28px;
+    height: 80px;
   }
 
   .container {
-    max-width: 1128px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 63px;
+  }
+
+  .header__menu_default {
+    max-width: 550px;
+    @include flex(space-between);
+    gap: 28px;
   }
 
   // ----------Forecasts section
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1128px;
+  }
+
   .forecasts {
+    @include gridRC(1, 1, -1);
     margin-bottom: 55px;
   }
 
@@ -198,6 +387,7 @@ body {
     margin-bottom: 33px;
 
     @include flex(space-between);
+    gap: 24px;
   }
 
   .card {
@@ -210,6 +400,81 @@ body {
 
   .leagues__list {
     width: 264px;
-    height: 595px;
+  }
+
+  // ----------------Match-center
+  .match {
+    @include gridRC(2, 2, 2);
+  }
+
+  .match__navigation {
+    margin-left: 40px;
+  }
+
+  .match__list {
+    max-width: 840px;
+    margin-top: 25px;
+  }
+
+  .match__item {
+    height: 55.9px;
+    grid-template-columns: 2fr 2fr 0.2fr 2fr 2fr;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  .match__item_inner {
+    padding: 14px 16px 14px 16px;
+  }
+
+  .match__item-el_l,
+  .match__item-name-reverse {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    align-items: center;
+  }
+
+  .match__item-name,
+  .match__item-number-reverse,
+  .match__icon-reverse {
+    @include gridRC(1, 2, 2);
+  }
+  .match__item-number,
+  .match__item-name-reverse {
+    @include gridRC(1, 1, 1);
+  }
+
+  .match__item-el_hide,
+  .match__item-number,
+  .match__item-number-reverse {
+    text-align: center;
+  }
+
+  .match__item-name-reverse {
+    justify-content: end;
+    gap: 8px;
+  }
+  .match__item-name-reverse,
+  .match__item-name {
+    gap: 8px;
+  }
+
+  .match__icon {
+    @include widthHeight(28px, 28px);
+  }
+
+  // ---------------- Top leagues
+  .leagues {
+    @include gridRC(2, 2, 1);
+  }
+
+  .leagues-header__title {
+    text-align: start;
+    margin-bottom: 25px;
+  }
+
+  .leagues__list {
+    margin-left: 0;
   }
 }
