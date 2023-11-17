@@ -1,0 +1,205 @@
+.navigation__link {
+  font: var(--font-m-w900);
+}
+
+// List-card
+.body_rounded_white {
+  border-radius: 12px;
+  background-color: var(--bg-primary);
+}
+
+.card {
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: var(--font-s-w900);
+  text-transform: uppercase;
+  border-radius: 12px;
+  padding: 4px 12px;
+}
+
+.card__label_orange {
+  border: 3px solid var(--color-accent);
+  background-color: var(--color-orange);
+  color: var(--color-primary);
+}
+
+.card__banner {
+  @include flex(space-between);
+  padding: 31px 37px;
+  background-image: url("../images/cardbBanner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.card__image {
+  display: block;
+  width: 67px;
+  height: auto;
+}
+
+.card__info_inner {
+  padding: 16px 20px 20px 20px;
+}
+
+.card__info-item {
+  font: var(--font-s-w400);
+}
+
+.card__info-item_bold_blue {
+  color: var(--color-blue);
+  font-weight: var(--w900);
+}
+
+.card__info-item_grey {
+  color: var(--color-secondary);
+}
+
+.card__info-title {
+  font: var(--font-l-w700);
+  margin-top: 4px;
+}
+
+.button {
+  display: block;
+  font: var(--font-m-w900);
+  border-radius: 20px;
+  outline: none;
+  border-style: none;
+}
+
+.button_text {
+  padding: 6px 8px;
+  background-color: transparent;
+  color: var(--color-blue);
+
+  &:hover {
+    background-color: var(--color-lightBlue10);
+  }
+}
+
+.button__arrow {
+  margin-left: 10px;
+  display: block;
+}
+
+.button_outline {
+  border: 3px solid var(--color-lightBlue);
+  color: var(--color-primary);
+  box-sizing: border-box;
+  padding: 10px 12px 10px 20px;
+
+  &:hover {
+    background-color: var(--color-lightBlue);
+    color: var(--bg-primary);
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../images/icons/arrowButton.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 14px;
+    margin-left: 10px;
+  }
+
+  &:hover::after {
+    content: "";
+    background-image: url("../images/icons/arrowButtonWhite.svg");
+  }
+}
+
+.button_contained {
+  background-color: var(--color-lightBlue);
+  color: var(--bg-primary);
+  padding: 10px 44px;
+}
+
+.cursor_pointer {
+  cursor: url("../images/icons/cursor.png"), pointer;
+
+  transition: all 100ms linear;
+}
+
+// MEDIA SCREEN Mobile from 320px to 1023px
+@media screen and (max-width: 1023px) {
+  .forecasts {
+    margin-bottom: 70px;
+  }
+
+  .forecasts__navigation {
+    justify-content: center !important;
+    margin-bottom: 15px;
+  }
+
+  .match__navigation {
+    justify-content: start;
+  }
+
+  // List-card
+  .forecasts__cards {
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    @include widthHeight(336px, 266px);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .card__banner {
+    @include widthHeight(100%, 130px);
+  }
+}
+
+// MEDIA SCREEN Desktop from 1024px to max
+@media screen and (min-width: 1023px) {
+  .main {
+    display: grid;
+    grid-template-columns: 0.7fr 2.3fr;
+    gap: 24px;
+    margin-bottom: 63px;
+  }
+
+  .forecasts {
+    @include gridRC(1, 1, -1);
+    margin-bottom: 55px;
+  }
+
+  // List-card
+  .forecasts__cards {
+    margin-top: 16px;
+    margin-bottom: 33px;
+
+    @include flex(space-between);
+    gap: 24px;
+  }
+
+  .card {
+    @include widthHeight(360px, 276px);
+  }
+
+  .card__banner {
+    @include widthHeight(100%, 140px);
+    padding: 34px 40px;
+  }
+
+  .card__image {
+    width: 72px;
+  }
+
+  .leagues__list {
+    width: 264px;
+  }
+}

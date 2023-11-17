@@ -1,0 +1,138 @@
+// ----------Header
+.header_white {
+  background-color: var(--bg-primary);
+}
+
+.header {
+  @include flex(space-between);
+}
+
+.header__menu_default,
+.lang-switcher {
+  font: var(--font-m-w900);
+  color: var(--color-primary);
+}
+
+.menu__item:hover {
+  color: var(--color-lightBlue);
+}
+
+.menu__item-icon::after {
+  content: "";
+  background-image: url("../images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 1px;
+}
+
+.menu__item-icon:hover::after {
+  content: "";
+  background-image: url("../images/icons/arrowBlue.svg");
+  background-repeat: no-repeat;
+}
+
+.lang-switcher__item {
+  margin-left: 8px;
+}
+
+// MEDIA SCREEN Mobile from 320px to 1023px
+@media screen and (max-width: 1023px) {
+  .header {
+    height: 56px;
+    position: relative;
+  }
+
+  .header__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__logo-img {
+    display: block;
+    width: 141px;
+    height: 24px;
+  }
+
+  .bg_active {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-primary32);
+    z-index: 10;
+    transition: background-color 100ms linear;
+  }
+
+  .header__menu_mobile {
+    width: 296px;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    transform: translateX(-100%);
+    transition: transform 200ms linear;
+  }
+
+  .header__menu_mobile-active {
+    transform: translateX(0);
+  }
+
+  .header__logo-mobile {
+    @include flex(space-between);
+    margin-bottom: 20px;
+    padding: 16px 12px 0px 28px;
+  }
+
+  .menu__item_mobile {
+    padding: 12px 13px 12px 32px;
+
+    &:hover {
+      background-color: var(--color-lightGrey);
+    }
+  }
+
+  .menu__item-icon {
+    @include flex(space-between);
+
+    &::after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .header,
+  .forecasts-header__title {
+    margin-bottom: 16px;
+  }
+}
+
+// MEDIA SCREEN Desktop from 1024px to max
+@media screen and (min-width: 1023px) {
+  // ----------Header
+  .header {
+    margin-bottom: 28px;
+    height: 80px;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1152px;
+  }
+
+  .header__menu_default {
+    max-width: 580px;
+    // width: 550px;
+    @include flex(space-between);
+    gap: 28px;
+  }
+
+  .menu__item_hide {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+.leagues-header__title {
+  margin-bottom: 16px;
+}
+
+.leagues__list {
+  padding: 16px;
+  height: 595px;
+}
+
+.block_row {
+  @include flex(start);
+}
+
+.leagues__list-item {
+  gap: 8px;
+  margin-bottom: 20px;
+  font: var(--font-m-w600);
+  cursor: pointer;
+}
+
+.leagues__list-item_default {
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.leagues__icon {
+  width: 20px;
+  height: 20px;
+}
+
+// MEDIA SCREEN Mobile from 320px to 1023px
+@media screen and (max-width: 1023px) {
+  .leagues {
+    margin-bottom: 77px;
+  }
+
+  .leagues__list {
+    width: 336px;
+  }
+}
+
+// MEDIA SCREEN Desktop from 1024px to max
+@media screen and (min-width: 1023px) {
+  .leagues {
+    @include gridRC(2, 2, 1);
+  }
+
+  .leagues-header__title {
+    text-align: start;
+    margin-bottom: 25px;
+    margin-top: 6px;
+  }
+
+  .leagues__list {
+    margin-left: 0;
+  }
+}
