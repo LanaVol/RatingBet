@@ -7,35 +7,44 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header_white">
+    <header class="header_white" id="home">
       <div class="header container">
-        <div class="header__burger block_hide">
+        <div class="block_hide">
           <figure>
-            <img src="./images/icons/navburger.svg" alt="Menu icon" />
+            <img src="./images/icons/navburger.svg" alt="Menu icon" class="header__burger cursor_pointer" />
           </figure>
         </div>
 
-        <div class="header__logo">
-          <figure>
-            <img src="./images/logo.svg" alt="Logo" />
-          </figure>
-        </div>
+        <figure class="header__logo">
+          <a href="#home" class="cursor_pointer"><img src="./images/logo.svg" alt="Logo" class="header__logo-img" /></a>
+        </figure>
 
-        <nav>
+        <nav class="bground">
           <ul class="menu header__menu_default header__menu_mobile">
-            <li class="menu__item"><a href="#home" class="cursor_pointer">Главная</a></li>
-            <li class="menu__item"><a href="#forecasts" class="cursor_pointer">Прогнозы</a></li>
-            <li class="menu__item"><a href="#bonuses" class="cursor_pointer">Бонусы</a></li>
-            <li class="menu__item">
-              <a href="#bookmakers" class="cursor_pointer">Букмекеры</a>
+            <li class="menu__item menu__item_hide">
+              <div class="header__logo-mobile">
+                <figure>
+                  <img src="./images/logo.svg" alt="Logo" />
+                </figure>
+                <div><img src="./images/icons/closeIcon.svg" class="close-btn cursor_pointer" /></div>
+              </div>
             </li>
-            <li class="menu__item"><a href="#news" class="cursor_pointer">Новости</a></li>
-            <li class="menu__item"><a href="#robobet" class="cursor_pointer">Робобет</a></li>
-            <li class="menu__item"><a href="#blog" class="cursor_pointer">Блог</a></li>
+
+            <li class="menu__item menu__item_hide menu__item_mobile"><a href="#home" class="cursor_pointer">Главная</a></li>
+            <li class="menu__item menu__item_mobile">
+              <a href="#forecasts" class="menu__item-icon cursor_pointer">Прогнозы</a>
+            </li>
+            <li class="menu__item menu__item_mobile"><a href="#bonuses" class="menu__item-icon cursor_pointer">Бонусы</a></li>
+            <li class="menu__item menu__item_mobile">
+              <a href="#bookmakers" class="menu__item-icon cursor_pointer">Букмекеры</a>
+            </li>
+            <li class="menu__item menu__item_mobile"><a href="#news" class="cursor_pointer">Новости</a></li>
+            <li class="menu__item menu__item_mobile"><a href="#robobet" class="cursor_pointer">Робобет</a></li>
+            <li class="menu__item menu__item_mobile"><a href="#blog" class="cursor_pointer">Блог</a></li>
           </ul>
         </nav>
 
-        <div class="lang-switcher block_row">
+        <div class="lang-switcher block_row cursor_pointer">
           <img src="./images/icons/earthIcon.svg" alt="Language Icon" />
           <p class="lang-switcher__item">Рус</p>
         </div>
@@ -50,7 +59,7 @@
 
           <nav>
             <ul class="navigation">
-              <li class="navigation__link navigation__link_default">
+              <li class="navigation__link navigation__link_default navigation__link_active">
                 <a href="#" class="cursor_pointer">Все</a>
               </li>
               <li class="navigation__link navigation__link_default">
@@ -66,14 +75,30 @@
         <ul class="forecasts__cards">
           <li class="card body_rounded_white block_center">
             <div class="card__banner">
+              <span class="card__label card__label_orange">Популярный</span>
               <figure>
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" />
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="card__image" />
               </figure>
               <figure>
-                <img src="./images/teamLogos/vs.png" alt="VS" />
+                <img src="./images/teamLogos/manchester-city.png" alt="Team logo" class="card__image" />
+              </figure>
+            </div>
+
+            <div class="card__info card__info_inner">
+              <p class="card__info-item card__info-item_grey"><span class="card__info-item_bold_blue">Футбол</span> / Завтра в 09:20</p>
+
+              <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
+            </div>
+          </li>
+
+          <li class="card body_rounded_white block_center">
+            <div class="card__banner">
+              <span class="card__label card__label_orange">Популярный</span>
+              <figure>
+                <img src="./images/teamLogos/munchen.png" alt="Team logo" class="card__image" />
               </figure>
               <figure>
-                <img src="./images/teamLogos/manchester-city.png" alt="Team logo" />
+                <img src="./images/teamLogos/ffc.png" alt="Team logo" class="card__image" />
               </figure>
             </div>
 
@@ -87,33 +112,11 @@
           <li class="card body_rounded_white block_center">
             <div class="card__banner">
               <figure>
-                <img src="./images/teamLogos/munchen.png" alt="Team logo" />
+                <img src="./images/teamLogos/kuzbass.png" alt="Team logo" class="card__image" />
               </figure>
-              <figure>
-                <img src="./images/teamLogos/vs.png" alt="VS" />
-              </figure>
-              <figure>
-                <img src="./images/teamLogos/ffc.png" alt="Team logo" />
-              </figure>
-            </div>
 
-            <div class="card__info card__info_inner">
-              <p class="card__info-item card__info-item_grey"><span class="card__info-item_bold_blue">Футбол</span> / Завтра в 09:20</p>
-
-              <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
-            </div>
-          </li>
-
-          <li class="card body_rounded_white block_center">
-            <div class="card__banner">
               <figure>
-                <img src="./images/teamLogos/kuzbass.png" alt="Team logo" />
-              </figure>
-              <figure>
-                <img src="./images/teamLogos/vs.png" alt="VS" />
-              </figure>
-              <figure>
-                <img src="./images/teamLogos/fcsm.png" alt="Team logo" />
+                <img src="./images/teamLogos/fcsm.png" alt="Team logo" class="card__image" />
               </figure>
             </div>
 
@@ -125,14 +128,12 @@
           </li>
         </ul>
 
-        <button class="button button_outline block_row block_center cursor_pointer">
-          Больше прогнозов<span class="button__arrow"><img src="./images/icons/arrowButton.svg" alt="Arrow" /></span>
-        </button>
+        <button class="button button_outline block_row block_center cursor_pointer">Больше прогнозов</button>
       </section>
 
       <!------------------ Match-center ------------------>
       <section class="match">
-        <div class="header-row">
+        <div class="match__header header-row">
           <h2 class="match-header__title title-font">Матч-центр</h2>
 
           <nav>
@@ -146,7 +147,7 @@
               <li class="navigation__link navigation__link_default">
                 <a href="#!" class="cursor_pointer">Вчера</a>
               </li>
-              <li class="navigation__link navigation__link_default">
+              <li class="navigation__link navigation__link_default navigation__link_active">
                 <a href="#!" class="cursor_pointer">Сегодня</a>
               </li>
               <li class="navigation__link navigation__link_default">
@@ -158,9 +159,7 @@
             </ul>
           </nav>
 
-          <button class="button button_text block_row cursor_pointer">
-            <span class="button__arrow"><img src="./images/icons/calendar.svg" alt="Arrow" /></span>Календарь
-          </button>
+          <button class="button button_text match__calendar-btn block_row cursor_pointer">Календарь</button>
         </div>
 
         <ul class="match__list block_center">
@@ -186,9 +185,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -214,9 +211,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -242,9 +237,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -270,9 +263,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -298,9 +289,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -326,9 +315,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -354,9 +341,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -382,9 +367,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -410,9 +393,7 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
 
@@ -438,16 +419,12 @@
             </div>
 
             <div class="match__item-el match__item-el_end">
-              <button class="button button_text block_row cursor_pointer">
-                <span class="button__arrow"><img src="./images/icons/forecastIcon.svg" alt="Arrow" /></span>Прогноз
-              </button>
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
           </li>
         </ul>
 
-        <button class="button button_outline block_row block_center cursor_pointer block_hide">
-          Все матчи<span class="button__arrow"><img src="./images/icons/arrowButton.svg" alt="Arrow" /></span>
-        </button>
+        <button class="button button_outline block_row block_center cursor_pointer block_hide">Все матчи</button>
       </section>
 
       <!-------------- Top leagues ------------------>
