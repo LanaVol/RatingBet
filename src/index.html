@@ -73,13 +73,13 @@
         </div>
 
         <ul class="forecasts__cards">
-          <li class="card body_rounded_white block_center">
+          <!-- <li class="card body_rounded_white block_center">
             <div class="card__banner">
               <span class="card__label card__label_orange">Популярный</span>
-              <figure>
+              <figure class="card__image">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="card__image" />
               </figure>
-              <figure>
+              <figure class="card__image">
                 <img src="./images/teamLogos/manchester-city.png" alt="Team logo" class="card__image" />
               </figure>
             </div>
@@ -125,7 +125,7 @@
 
               <h3 class="card__info-title">Металлург Магнитогорск - Трактор. Прогноз на матч 11.04.2022</h3>
             </div>
-          </li>
+          </li> -->
         </ul>
 
         <button class="button button_outline block_row block_center cursor_pointer">Больше прогнозов</button>
@@ -136,47 +136,49 @@
         <div class="match__header header-row">
           <h2 class="match-header__title title-font">Матч-центр</h2>
 
-          <nav>
-            <ul class="navigation match__navigation">
-              <li class="navigation__link navigation__link_default">
-                <a href="#!" class="cursor_pointer">Live</a>
-              </li>
-              <li class="navigation__link navigation__link_default">
-                <a href="#!" class="cursor_pointer">05.06</a>
-              </li>
-              <li class="navigation__link navigation__link_default">
-                <a href="#!" class="cursor_pointer">Вчера</a>
-              </li>
-              <li class="navigation__link navigation__link_default navigation__link_active">
-                <a href="#!" class="cursor_pointer">Сегодня</a>
-              </li>
-              <li class="navigation__link navigation__link_default">
-                <a href="#!" class="cursor_pointer">Завтра</a>
-              </li>
-              <li class="navigation__link navigation__link_default">
-                <a href="#!" class="cursor_pointer">09.06</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="match__navigation-body">
+            <nav>
+              <ul class="navigation match__navigation">
+                <li class="navigation__link navigation__link_default">
+                  <a href="#!" class="cursor_pointer">Live</a>
+                </li>
+                <li class="navigation__link navigation__link_default">
+                  <a href="#!" class="cursor_pointer">05.06</a>
+                </li>
+                <li class="navigation__link navigation__link_default">
+                  <a href="#!" class="cursor_pointer">Вчера</a>
+                </li>
+                <li class="navigation__link navigation__link_default navigation__link_active">
+                  <a href="#!" class="cursor_pointer">Сегодня</a>
+                </li>
+                <li class="navigation__link navigation__link_default">
+                  <a href="#!" class="cursor_pointer">Завтра</a>
+                </li>
+                <li class="navigation__link navigation__link_default">
+                  <a href="#!" class="cursor_pointer">09.06</a>
+                </li>
+              </ul>
+            </nav>
 
-          <button class="button button_text match__calendar-btn block_row cursor_pointer">Календарь</button>
+            <button class="button match__calendar-btn block_row cursor_pointer">Календарь</button>
+          </div>
         </div>
 
         <ul class="match__list block_center">
-          <li class="match__item match__item_inner body_rounded_white cursor_pointer">
+          <!-- <li class="match__item match__item_inner body_rounded_white cursor_pointer">
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -193,16 +195,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -219,16 +221,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -245,16 +247,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -271,16 +273,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -297,16 +299,68 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number match__item-el_orange">2</p>
+            </div>
+
+            <div class="match__item-el match__item-el_hide match__item-points match__item-el_orange">:</div>
+
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
+              <div class="match__item-name block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Манчестер</p>
+              </div>
+              <p class="match__item-number match__item-el_orange">3</p>
+            </div>
+
+            <div class="match__item-el match__item-el_end">
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
+            </div>
+          </li>
+
+          <li class="match__item match__item_inner body_rounded_white cursor_pointer">
+            <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
+
+            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
+              </div>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
+              <div class="match__item-name block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Евертон</p>
+              </div>
+              <p class="match__item-number">5</p>
+            </div>
+
+            <div class="match__item-el match__item-el_end">
+              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
+            </div>
+          </li>
+
+          <li class="match__item match__item_inner body_rounded_white cursor_pointer">
+            <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
+
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
+              </div>
+              <p class="match__item-number">2</p>
+            </div>
+
+            <div class="match__item-el match__item-el_hide match__item-points">:</div>
+
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -323,16 +377,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -349,16 +403,16 @@
             <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
 
             <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
+              <div class="match__item-name match__item-icon-reverse block_row">
+                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
+                <p>Барселона</p>
               </div>
-              <p class="match__item-number-reverse">1</p>
+              <p class="match__item-number">2</p>
             </div>
 
             <div class="match__item-el match__item-el_hide match__item-points">:</div>
 
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
+            <div class="match__item-el match__item-el_s match__item-el_l-reverse match__item-el_black">
               <div class="match__item-name block_row">
                 <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
                 <p>Евертон</p>
@@ -369,59 +423,7 @@
             <div class="match__item-el match__item-el_end">
               <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
             </div>
-          </li>
-
-          <li class="match__item match__item_inner body_rounded_white cursor_pointer">
-            <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
-
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
-              </div>
-              <p class="match__item-number-reverse">1</p>
-            </div>
-
-            <div class="match__item-el match__item-el_hide match__item-points">:</div>
-
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
-                <p>Евертон</p>
-              </div>
-              <p class="match__item-number">1</p>
-            </div>
-
-            <div class="match__item-el match__item-el_end">
-              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
-            </div>
-          </li>
-
-          <li class="match__item match__item_inner body_rounded_white cursor_pointer">
-            <div class="match__item-el match__item-el_grey">Сегодня в 17:15</div>
-
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name-reverse block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon match__icon-reverse" />
-                <p>Валенсия</p>
-              </div>
-              <p class="match__item-number-reverse">1</p>
-            </div>
-
-            <div class="match__item-el match__item-el_hide match__item-points">:</div>
-
-            <div class="match__item-el match__item-el_s match__item-el_l match__item-el_black">
-              <div class="match__item-name block_row">
-                <img src="./images/teamLogos/fcb.png" alt="Team logo" class="match__icon" />
-                <p>Евертон</p>
-              </div>
-              <p class="match__item-number">1</p>
-            </div>
-
-            <div class="match__item-el match__item-el_end">
-              <button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>
-            </div>
-          </li>
+          </li> -->
         </ul>
 
         <button class="button button_outline block_row block_center cursor_pointer block_hide">Все матчи</button>
@@ -429,75 +431,64 @@
 
       <!-------------- Top leagues ------------------>
       <section class="leagues">
-        <h2 class="leagues-header__title title-font">Топ лиги</h2>
+        <h2 class="leagues__title title-font">Топ лиги</h2>
 
-        <div class="leagues__list body_rounded_white block_center">
-          <ul>
+        <div class="leagues__body body_rounded_white block_center">
+          <!-- <ul class="leagues__list">
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
-              <a href="#" class="cursor_pointer">Лига чемпионов</a>
+              <div class="leagues__icon"></div>
+              <a href="#" class="cursor_pointer"> Лига чемпионов</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
+              <div class="leagues__icon"></div>
               <a href="#" class="cursor_pointer">Лига Европы</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Суперкубок УЕФА</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Лига Конференций</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Клубный чемпионат мира</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Чемпионат Англии (АПЛ)</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Суперкубок Англии</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Кубок Английской Лиги</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Чемпионшип</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Лига Чемпионов</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Суперкубок Англии</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Кубок Английской Лиги</a>
             </li>
 
             <li class="leagues__list-item leagues__list-item_default block_row">
-              <img src="./images/teamLogos/fcb.png" alt="Team logo" class="leagues__icon" />
               <a href="#" class="cursor_pointer">Чемпионшип</a>
             </li>
-          </ul>
+          </ul> -->
 
           <button class="button button_contained cursor_pointer block_center">Все лиги</button>
         </div>
