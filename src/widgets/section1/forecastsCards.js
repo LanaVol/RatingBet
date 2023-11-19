@@ -1,9 +1,26 @@
+/**
+ * Imports forecast data from an external module.
+ * @type {Object} forecastsData - The data containing forecasts.
+ */
 import { forecastsData } from "../../data/data";
 
+/**
+ * Reference to the container for inserting forecast cards.
+ * @type {HTMLElement}
+ */
 const forecastsCards = document.querySelector(".forecasts__cards");
+
+/**
+ * Array that will contain HTML strings for each forecast card.
+ * @type {Array}
+ */
 const list = [];
 
+/**
+ * Iterates over keys of the forecastsData object and constructs HTML strings for each forecast card.
+ */
 for (const key in forecastsData) {
+  // Destructuring data for convenience
   const {
     category,
     date,
@@ -16,6 +33,10 @@ for (const key in forecastsData) {
     popular,
   } = forecastsData[key];
 
+  /**
+   * HTML string for each forecast card.
+   * @type {string}
+   */
   const card = `<li class="card body_rounded_white block_center">
                   <div class="card__banner">
                     ${popular ? '<span class="card__label card__label_orange">Популярный</span>' : ""}
@@ -28,6 +49,11 @@ for (const key in forecastsData) {
                   </div>
                 </li>`;
 
+  // Adding the HTML string to the array
   list.push(card);
 }
+
+/**
+ * Inserts all generated HTML strings into the .forecasts__cards container.
+ */
 forecastsCards.insertAdjacentHTML("afterbegin", list.join(""));
