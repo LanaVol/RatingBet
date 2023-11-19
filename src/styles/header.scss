@@ -63,7 +63,8 @@
     bottom: 0;
     background-color: var(--color-primary32);
     z-index: 4;
-    transition: background-color 100ms linear;
+
+    transition: background-color 800ms ease-in;
   }
 
   .header__menu_mobile {
@@ -73,14 +74,21 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -400px;
     z-index: 5;
-    transform: translateX(-100%);
-    transition: transform 200ms linear;
+
+    transition: transform 800ms linear, left 800ms linear;
   }
 
   .header__menu_mobile-active {
-    transform: translateX(0);
+    transform: translateX(0%);
+    left: 0px;
+  }
+
+  .header__menu_mobile-hide {
+    transform: translateX(-100%);
+
+    transition: transform 800ms linear, left 800ms linear;
   }
 
   .header__logo-mobile {
@@ -127,7 +135,6 @@
 
   .header__menu_default {
     max-width: 580px;
-    // width: 550px;
     @include flex(space-between);
     gap: 28px;
   }

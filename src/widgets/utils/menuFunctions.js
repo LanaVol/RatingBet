@@ -17,6 +17,7 @@ body.addEventListener("click", handleClick);
 function handleClick(e) {
   // Open mobile menu
   if (e.target.classList.contains("header__burger")) {
+    menu.classList.remove("header__menu_mobile-hide");
     bg.classList.add("bg_active");
     menu.classList.add("header__menu_mobile-active");
   }
@@ -28,6 +29,7 @@ function handleClick(e) {
   ) {
     bg.classList.remove("bg_active");
     menu.classList.remove("header__menu_mobile-active");
+    menu.classList.add("header__menu_mobile-hide");
   }
 
   // Toggle active navigation link
