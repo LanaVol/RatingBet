@@ -1,13 +1,235 @@
-const forecasts = [
+// Section 1 - Team's logos (mobile)
+const s1IconsXY = {
+  logo1: { x: 2, y: 40 },
+  logo2: { x: 98, y: 40 },
+  logo3: { x: 79, y: 40 },
+  logo4: { x: 40, y: 40 },
+  logo5: { x: 60, y: 40 },
+  logo6: { x: 21, y: 40 },
+};
+
+export const forecastsData = [
   {
     category: "Футбол",
     date: "Завтра",
     time: "9:20",
     team1: "Металлург Магнитогорск",
-    labelTeam1: "",
+    iconTeam1: s1IconsXY.logo1,
     team2: "Трактор",
-    labelTeam2: "",
+    iconTeam2: s1IconsXY.logo2,
     dateForecast: "11.04.2022",
     popular: true,
+  },
+  {
+    category: "Футбол",
+    date: "Завтра",
+    time: "9:20",
+    team1: "Лейпциг",
+    iconTeam1: s1IconsXY.logo3,
+    team2: "Хоффенхайм",
+    iconTeam2: s1IconsXY.logo4,
+    dateForecast: "10.04.2022",
+    popular: true,
+  },
+  {
+    category: "Футбол",
+    date: "Завтра",
+    time: "9:20",
+    team1: "Манчестер Сити",
+    iconTeam1: s1IconsXY.logo5,
+    team2: "Ливерпуль",
+    iconTeam2: s1IconsXY.logo6,
+    dateForecast: "10.04.2022",
+    popular: false,
+  },
+];
+
+// Section 2 - Match-center
+const s2IconsXY = {
+  logo1: { x: 1, y: 60 },
+  logo2: { x: 21, y: 60 },
+  logo3: { x: 40, y: 60 },
+  logo4: { x: 60, y: 60 },
+  logo5: { x: 79, y: 60 },
+  logo6: { x: 99, y: 60 },
+};
+
+export const matchCenter = [
+  {
+    date: "Ceгодня в 17:15",
+    time: "17:15",
+    team1: "Боруссия",
+    iconTeam1: s2IconsXY.logo1,
+    score1: null,
+    team2: "Манчестер Сити",
+    iconTeam2: s2IconsXY.logo2,
+    score2: null,
+    isLive: false,
+    showForecastBtn: true,
+  },
+  {
+    date: "Завтра в 09:20",
+    team1: "Евертон",
+    iconTeam1: s2IconsXY.logo3,
+    score1: null,
+    team2: "Валенсия",
+    iconTeam2: s2IconsXY.logo4,
+    score2: null,
+    isLive: false,
+    showForecastBtn: false,
+  },
+  {
+    date: "Завтра в 09:20",
+    team1: "Боруссия",
+    iconTeam1: s2IconsXY.logo1,
+    score1: null,
+    team2: "Манчестер Сити",
+    iconTeam2: s2IconsXY.logo2,
+    score2: null,
+    isLive: false,
+    showForecastBtn: false,
+  },
+  {
+    date: "20.12.2022, 19:45",
+    team1: "Вулвергемптон",
+    iconTeam1: s2IconsXY.logo5,
+    score1: null,
+    team2: "Евертон",
+    iconTeam2: s2IconsXY.logo3,
+    score2: null,
+    isLive: false,
+    showForecastBtn: false,
+  },
+  {
+    date: "120'",
+    team1: "Барселона",
+    iconTeam1: s2IconsXY.logo6,
+    score1: "2",
+    team2: "Манчестер Сити",
+    iconTeam2: s2IconsXY.logo2,
+    score2: "3",
+    isLive: true,
+    showForecastBtn: true,
+  },
+  {
+    date: "44'",
+    team1: "Боруссия",
+    iconTeam1: s2IconsXY.logo1,
+    score1: "0",
+    team2: "Валенсия",
+    iconTeam2: s2IconsXY.logo4,
+    score2: "1",
+    isLive: true,
+    showForecastBtn: false,
+  },
+  {
+    date: "21.12.2022, 12:17",
+    team1: "Евертон",
+    iconTeam1: s2IconsXY.logo3,
+    score1: "0",
+    addScore1: "(3)",
+    team2: "Валенсия",
+    iconTeam2: s2IconsXY.logo4,
+    score2: "0",
+    addScore2: "(4)",
+    isLive: false,
+    showForecastBtn: false,
+  },
+  {
+    date: "23.12.2022, 17:15",
+    team1: "Манчестер Сити",
+    iconTeam1: s2IconsXY.logo2,
+    score1: "2",
+    team2: "Барселона",
+    iconTeam2: s2IconsXY.logo6,
+    score2: "4",
+    isLive: false,
+    showForecastBtn: true,
+  },
+  {
+    date: "23.12.2022, 19:45",
+    team1: "Барселона",
+    iconTeam1: s2IconsXY.logo6,
+    score1: "0",
+    team2: "Манчестер Сити",
+    iconTeam2: s2IconsXY.logo2,
+    score2: "2",
+    isLive: false,
+    showForecastBtn: false,
+  },
+  {
+    date: "23.12.2022, 19:45",
+    team1: "Евертон",
+    iconTeam1: s2IconsXY.logo3,
+    score1: "1",
+    team2: "Валенсия",
+    iconTeam2: s2IconsXY.logo4,
+    score2: "2",
+    isLive: false,
+    showForecastBtn: false,
+  },
+];
+
+// Section 3 - Top leagues icons
+const s3IconsXY = {
+  icon1: { x: -4, y: -4 },
+  icon2: { x: -32, y: -4 },
+  icon3: { x: -60, y: -4 },
+  icon4: { x: -88, y: -4 },
+  icon5: { x: -116, y: -4 },
+};
+
+export const topLeaguesData = [
+  {
+    name: "Лига Чемпионов",
+    iconPosition: s3IconsXY.icon2,
+  },
+  {
+    name: "Лига Европы",
+    iconPosition: s3IconsXY.icon3,
+  },
+  {
+    name: "Суперкубок УЕФА",
+    iconPosition: s3IconsXY.icon1,
+  },
+  {
+    name: "Лига Конференций",
+    iconPosition: s3IconsXY.icon4,
+  },
+  {
+    name: "Клубный чемпионат мира",
+    iconPosition: s3IconsXY.icon5,
+  },
+  {
+    name: "Чемпионат Англии (АПЛ)",
+    iconPosition: s3IconsXY.icon2,
+  },
+  {
+    name: "Суперкубок Англии",
+    iconPosition: s3IconsXY.icon3,
+  },
+  {
+    name: "Кубок Английской Лиги (А...",
+    iconPosition: s3IconsXY.icon1,
+  },
+  {
+    name: "Чемпионшип",
+    iconPosition: s3IconsXY.icon4,
+  },
+  {
+    name: "Лига Чемпионов",
+    iconPosition: s3IconsXY.icon5,
+  },
+  {
+    name: "Суперкубок Англии",
+    iconPosition: s3IconsXY.icon3,
+  },
+  {
+    name: "Кубок Английской Лиги (А...",
+    iconPosition: s3IconsXY.icon1,
+  },
+  {
+    name: "Чемпионшип",
+    iconPosition: s3IconsXY.icon4,
   },
 ];
