@@ -60,7 +60,7 @@
   @include widthHeight(24px, 24px);
 }
 
-.match__item-number,
+.match__score-number,
 .match__item-points {
   font: var(--font-l-w900);
 }
@@ -97,9 +97,17 @@
     margin-bottom: 53px;
   }
 
+  .navigation-scroll {
+    width: 100%;
+    height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+  }
+
   .match__navigation-body {
-    // @include flex(start);
     flex-direction: row-reverse;
+    align-items: center;
     gap: 20px;
   }
 
@@ -110,9 +118,7 @@
 
   .match__item {
     height: 121px;
-    // align-items: start;
     align-items: center;
-    grid-template-columns: 1.3fr 1fr;
     margin-bottom: 12px;
   }
 
@@ -125,19 +131,38 @@
   }
 
   .match__item-el:nth-child(2) {
-    @include gridRC(2, 1, -1);
-    margin-top: 6px;
+    @include gridRC(2, 1, 1);
+    padding-top: 6px;
+  }
+
+  .match__item-el:nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 8px;
+    padding-top: 6px;
+  }
+
+  .match__score-text {
+    @include flex(start);
+    flex-direction: row-reverse;
+    gap: 8px;
+    font: var(--font-l-w400);
   }
 
   .match__item-el:nth-child(4) {
-    @include gridRC(3, 1, -1);
+    @include gridRC(3, 1, 1);
   }
 
   .match__item-el:nth-child(5) {
     @include gridRC(1, 2, 2);
   }
 
-  .match__item-el_grey {
+  .match__item-line {
     position: relative;
 
     &::after {
@@ -158,12 +183,13 @@
     @include flex(space-between);
   }
 
-  .match-btn {
-    // margin-bottom: 6px;
-  }
-
   .match-header__title {
     margin-bottom: 24px;
+  }
+
+  .match-btn {
+    padding: 0;
+    background-color: transparent !important;
   }
 }
 
@@ -187,7 +213,7 @@
 
   .match__item {
     height: 55.9px;
-    grid-template-columns: 0.8fr 1.2fr 0.1fr 1.2fr 0.8fr;
+    grid-template-columns: 0.8fr 1.2fr 0.4fr 1.2fr 0.8fr;
     gap: 6px;
 
     &:not(:last-child) {
@@ -196,7 +222,7 @@
   }
 
   .match__item_inner {
-    padding: 14px 16px 14px 16px;
+    padding: 8px 16px 8px 16px;
   }
 
   .match__item-el_l {
@@ -210,12 +236,20 @@
     gap: 20px;
   }
 
+  .match__score {
+    @include flex(center);
+    gap: 6px;
+    text-align: center;
+  }
+
   .match__item-el_hide {
     text-align: center;
   }
 
-  .match__item-number {
-    text-align: start;
+  .match__score-text {
+    font: var(--font-m-w400);
+    line-height: var(--line12);
+    padding-top: 0;
   }
 
   .match__item-icon-reverse {
@@ -224,5 +258,6 @@
 
   .match__icon {
     @include widthHeight(28px, 28px);
+    background-size: 710% auto;
   }
 }

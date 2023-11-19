@@ -10,7 +10,7 @@ body {
   background-color: var(--bg-secondary);
 }
 
-// -----Shared styles
+// Common styles
 .title-font {
   font: var(--font-xl-w900);
   text-align: center;
@@ -25,7 +25,6 @@ body {
     background-color: var(--color-accent);
     display: inline-block;
     transform: skew(-25deg);
-    // margin: 0 8px;
   }
 
   &::before {
@@ -61,6 +60,11 @@ body {
   }
 }
 
+.body_rounded_white {
+  border-radius: 12px;
+  background-color: var(--bg-primary);
+}
+
 .container {
   padding: 0px 12px;
 }
@@ -73,6 +77,11 @@ body {
 .block_center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.cursor_pointer {
+  cursor: url("../images/icons/cursor.png"), pointer;
+  transition: all 100ms linear;
 }
 
 // MEDIA SCREEN Desktop from 1024px to max

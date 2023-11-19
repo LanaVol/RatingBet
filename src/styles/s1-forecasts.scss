@@ -2,12 +2,6 @@
   font: var(--font-m-w900);
 }
 
-// List-card
-.body_rounded_white {
-  border-radius: 12px;
-  background-color: var(--bg-primary);
-}
-
 .card {
   position: relative;
 }
@@ -125,12 +119,6 @@
   padding: 10px 44px;
 }
 
-.cursor_pointer {
-  cursor: url("../images/icons/cursor.png"), pointer;
-
-  transition: all 100ms linear;
-}
-
 // MEDIA SCREEN Mobile from 320px to 1023px
 @media screen and (max-width: 1023px) {
   .forecasts {
@@ -179,13 +167,11 @@
     margin-bottom: 55px;
   }
 
-  // List-card
   .forecasts__cards {
-    margin-top: 16px;
-    margin-bottom: 33px;
-
     @include flex(space-between);
     gap: 24px;
+    margin-top: 16px;
+    margin-bottom: 33px;
   }
 
   .card {
