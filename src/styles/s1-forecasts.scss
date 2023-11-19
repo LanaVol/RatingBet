@@ -69,6 +69,11 @@
   border-radius: 20px;
   outline: none;
   border-style: none;
+
+  &:active {
+    transform: translateY(1px);
+    transition: transform 100ms ease-in-out;
+  }
 }
 
 .button_text {
