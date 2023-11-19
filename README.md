@@ -21,6 +21,7 @@ Link to preview: https://lanavol.github.io/RatingBet/
 6. **CSS Preprocessor:** A CSS preprocessor (SCSS) is utilized to enhance code maintainability and structure.
 
 7. **Sprite Images for Icons:** Icons are efficiently managed and displayed using sprite images,that improving performance.
+
    ![App Screenshot](./src/images/matchLogos/matchLogos_sprites.png)
 
 8. **Dynamic List Items and Cards:** List items and cards in the project are dynamically generated through JavaScript using data imported from an external file.
@@ -31,6 +32,6 @@ Link to preview: https://lanavol.github.io/RatingBet/
 
 2. **Burger Menu:** Clicking the burger button triggers the appearance of a side menu from the left side.
 
-3. **Close Menu:** Clicking the close button (X) in the side menu, or optionally anywhere outside the menu, hides the menu.
+3. **Close Menu:** Clicking the close button (X) in the side menu, or anywhere outside the menu, hides the menu.
 
 **Enjoy your viewing!😊**
