@@ -85,7 +85,7 @@ for (const key in matchCenter) {
                   </div>
 
                   <div class="match__item-el match__item-el_end">
-                    ${showForecastBtn ? '<button class="button button_text match-btn block_row cursor_pointer">Прогноз</button>' : ""}
+                    ${showForecastBtn ? '<button class="button button_text match-btn block_row cursor_pointer">Forecast</button>' : ""}
                   </div>
                 </li>`;
 
